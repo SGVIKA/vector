@@ -14,7 +14,10 @@ RUN npm ci --only=production --legacy-peer-deps
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+# Копируем полную папку @prisma
+COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 ENV NODE_ENV=production
 ENV PORT=4000
 EXPOSE 4000
+RUN npx prisma generate --schema=./prisma/schema.prisma
 CMD ["node", "dist/main"]
