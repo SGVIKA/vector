@@ -3,7 +3,7 @@ import { ISwitcherView } from '../interfaces/ui.interface'
 
 import styles from './ui.module.css'
 
-export function SwitcherView({ options, value, onChange }: ISwitcherView) {
+export function SwitcherView<T>({ options, value, onChange }: ISwitcherView<T>) {
 	return (
 		<div className={styles.switcherView}>
 			{options.map(option => (

@@ -54,15 +54,22 @@ export interface IMenuItem {
 
 //SwitcherView
 
-export interface IViewOptions {
+export interface IViewTasksOptions {
 	type: string
 	label: string
 	icon: LucideIcon
-	view: ComponentType<{ data: INotesWithFilter }>
+	view: ComponentType
 }
 
-export interface ISwitcherView {
-	options: IViewOptions[]
+export interface IViewOptions<T> {
+	type: string
+	label: string
+	icon: LucideIcon
+	view: ComponentType<{ data: T }>
+}
+
+export interface ISwitcherView<T> {
+	options: IViewOptions<T>[]
 	value: string
 	onChange: (value: string) => void
 }

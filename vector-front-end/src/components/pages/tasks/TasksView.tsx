@@ -16,12 +16,12 @@ export function TasksView() {
 
 	return (
 		<div>
-			<SwitcherView
+			<SwitcherView<any>
 				options={TASKS_VIEWS}
 				value={type}
 				onChange={setType}
 			/>
-			{CurrentView ? <CurrentView /> : null}
+			{CurrentView ? <CurrentView data={{}}/> : null}
 		</div>
 	)
 }

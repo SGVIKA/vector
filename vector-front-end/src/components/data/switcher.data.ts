@@ -1,12 +1,13 @@
 import { Kanban, LayoutGrid, LayoutList, ListTodo } from 'lucide-react'
 
-import { IViewOptions } from '../interfaces/ui.interface'
+import { IViewOptions, IViewTasksOptions } from '../interfaces/ui.interface'
 import { NotesGridView } from '../pages/notes/grid-view/NotesGridView'
 import { NotesListView } from '../pages/notes/list-view/NotesListView'
 import { KanbanView } from '../pages/tasks/kanban-view/KanbanView'
 import { TasksListView } from '../pages/tasks/list-view/TasksListView'
+import { INotesWithFilter } from '../interfaces/notes.interface'
 
-export const TASKS_VIEWS: IViewOptions[] = [
+export const TASKS_VIEWS: IViewOptions<any>[] = [
 	{
 		type: 'list',
 		label: 'Список',
@@ -16,7 +17,7 @@ export const TASKS_VIEWS: IViewOptions[] = [
 	{ type: 'kanban', label: 'Доска', icon: Kanban, view: KanbanView }
 ]
 
-export const NOTES_VIEWS: IViewOptions[] = [
+export const NOTES_VIEWS: IViewOptions<INotesWithFilter>[] = [
 	{
 		type: 'list',
 		label: 'Список',
