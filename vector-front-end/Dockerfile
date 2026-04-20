@@ -10,7 +10,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --only=production --legacy-peer-deps
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+# Проверяем существование public перед копированием
+RUN if [ -d "/app/public" ]; then cp -r /app/public ./public; fi
 COPY --from=builder /app/package.json ./package.json
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
