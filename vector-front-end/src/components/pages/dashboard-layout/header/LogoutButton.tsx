@@ -19,6 +19,7 @@ export function LogoutButton() {
 	return (
 		<div>
 			<button
+			type='submit'
 				className={styles.logoutButton}
 				onClick={() => mutate()}
 			>
