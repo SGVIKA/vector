@@ -9,8 +9,14 @@ class TaskService {
 	async getTasks(): Promise<ITaskResponse[]> {
 		const { data } = await axiosWithAuth.get<ITaskResponse[]>(this.BASE_URL)
 		const sorted = [...data].sort((a, b) => {
-			const aP = PRIORITY_ORDER[a.priority]
-			const bP = PRIORITY_ORDER[b.priority]
+			const aP =
+				a.priority && PRIORITY_ORDER[a.priority] !== undefined
+					? PRIORITY_ORDER[a.priority]
+					: 0
+			const bP =
+				b.priority && PRIORITY_ORDER[b.priority] !== undefined
+					? PRIORITY_ORDER[b.priority]
+					: 0
 			if (bP !== aP) return bP - aP
 			return 0
 		})
