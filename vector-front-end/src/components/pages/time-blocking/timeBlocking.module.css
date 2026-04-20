@@ -1,0 +1,64 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--margin-between-elements-l);
+
+    background-color: var(--color-bg-form);
+    border-radius: var(--border-radius-m);
+    margin: var(--margin-between-elements-s);
+    padding: var(--padding-m) var(--padding-s);
+}
+
+.freeTime {
+    margin: var(--margin-between-elements-m);
+    color: var(--color-subtext);
+}
+
+.blockContainer {
+    margin-bottom: var(--margin-between-elements-s);
+}
+
+.block {
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-s);
+
+    min-height: 30px;
+    max-height: 400px;
+    padding: var(--padding-xs);
+    border-radius: var(--border-radius-m);
+
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.action {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.action:hover {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--margin-between-elements-m);
+    max-width: 300px;
+}
+
+.saveButton {
+    font-size: var(--font-size-s);
+    padding: var(--padding-xs) var(--padding-s);
+}

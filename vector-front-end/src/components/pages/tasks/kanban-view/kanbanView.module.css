@@ -1,0 +1,60 @@
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--margin-between-elements-m);
+    overflow-x: auto;
+
+    background-color: var(--color-bg-form);
+    padding: var(--padding-s);
+    border-radius: var(--border-radius-m);
+    margin: var(--margin-between-elements-s) 0;
+    box-shadow: var(--box-shadow-base);
+    scrollbar-color: var(--linen) transparent;
+    padding-right: var(--padding-s);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+@supports selector(::-webkit-scrollbar) {
+
+    .container::-webkit-scrollbar-thumb {
+        background: var(--linen);
+        border-radius: var(--border-radius-s);
+    }
+
+    .container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+.column {
+    display: inline-block;
+    width: 300px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-m);
+    margin-top: var(--margin-between-elements-s);
+    border: 0.1px solid var(--khaki-beige);
+    background-color: var(--color-bg-form);
+
+    padding: var(--padding-s);
+}
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardItem {
+    margin-top: var(--margin-between-elements-m);
+
+}
+
+.deleteButtonPosition {
+    display: flex;
+    justify-content: flex-end;
+}

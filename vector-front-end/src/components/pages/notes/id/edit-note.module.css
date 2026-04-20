@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.editContainer {
+    width: 100%;
+    margin: var(--margin-between-elements-s);
+}
+
+.noteContainer {
+    background-color: var(--color-bg-form);
+    margin: var(--margin-between-elements-s);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-base);
+    padding: var(--padding-s) var(--padding-m);
+}
+
+.titleFiel {
+    padding: var(--padding-s) 0;
+    font-size: var(--font-size-l);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action {
+    background: transparent;
+    border: none;
+
+}
+
+.action>svg {
+    color: var(--faded-copper);
+    transition: color 0.2s;
+}
+
+.action>svg:hover {
+    color: var(--coffee-bean);
+    transition: color 0.2s;
+}
+
+.backBtn {
+    margin-left: var(--margin-between-elements-s);
+}
+
+
+.actionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-form);
+    margin: var(--margin-between-elements-s);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-base);
+    padding: var(--padding-s);
+}
+
+
+
+
+.shortListContainer {
+    opacity: 0;
+    max-width: 0;
+    padding-bottom: var(--margin-between-elements-s);
+}
+
+.shortListContainer.animateIn {
+    animation: slideIn 0.3s forwards;
+}
+
+.shortListContainer.animateOut {
+    animation: slideOut 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        max-width: 0;
+        pointer-events: none;
+    }
+
+    to {
+        opacity: 1;
+        max-width: 20%;
+        pointer-events: all;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        max-width: 20%;
+        pointer-events: all;
+    }
+
+    to {
+        opacity: 0;
+        max-width: 0;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,69 @@
+.noteRow {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+
+    background-color: var(--color-bg-form);
+    border: 1px solid var(--khaki-beige);
+    border-radius: var(--border-radius-m);
+    padding: var(--padding-s);
+    margin-bottom: var(--margin-between-elements-s);
+
+    transition: all 0.3s;
+}
+
+
+.noteRow:hover {
+    box-shadow: var(--box-shadow-base);
+    border: 1px solid var(--faded-copper);
+    transition: all 0.3s;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions>a {
+    width: 100%;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+.title {
+
+    font-size: var(--font-size-m);
+}
+
+.text {
+    margin: var(--margin-between-elements-s) 0;
+    font-size: var(--font-size-s);
+    color: var(--faded-copper);
+}
+
+
+.updatedAt {
+    margin: 0;
+    text-align: end;
+    color: var(--color-subtext);
+    font-size: var(--font-size-xs);
+
+}
+
+.deleteBtn {
+    padding: var(--padding-xs);
+    height: fit-content;
+    background: transparent;
+    border: none;
+    color: var(--faded-copper);
+    transition: color 0.3s;
+}
+
+.deleteBtn:hover {
+    color: var(--coffee-bean);
+    transition: color 0.3s;
+}

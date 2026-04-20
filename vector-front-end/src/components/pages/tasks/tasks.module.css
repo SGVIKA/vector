@@ -1,0 +1,57 @@
+.tasksContainer {
+    margin: var(--margin-between-elements-s);
+
+}
+
+
+
+
+.parentLable {
+    padding: var(--padding-2xs) var(--padding-s);
+    background-color: var(--linen);
+    border-radius: var(--border-radius-l);
+    font-size: var(--font-size-m);
+    color: var(--color-header);
+}
+
+.addTask>button {
+    background: transparent;
+    border: none;
+    color: var(--khaki-beige);
+    transition: color 0.3s;
+
+}
+
+.addTask>button:hover {
+    color: var(--coffee-bean);
+    transition: color 0.3s;
+}
+
+.grip {
+    border: none;
+    background: transparent;
+    color: var(--khaki-beige);
+    transition: color 0.3s;
+}
+
+.grip:hover {
+    color: var(--coffee-bean);
+    transition: color 0.3s;
+}
+
+.deleteBtn {
+    background: transparent;
+    border: none;
+    color: var(--faded-copper);
+    transition: color 0.3s;
+}
+
+.deleteBtn:hover {
+    color: var(--coffee-bean);
+    transition: color 0.3s;
+}
+
+.completedTask{
+    text-decoration: line-through;
+    color: #bcb3b3;
+}

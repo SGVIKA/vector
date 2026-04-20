@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    padding: var(--padding-m);
+    margin: var(--margin-m);
+    background-color: var(--color-bg-form);
+    border-radius: var(--border-radius-l);
+    width: 100%;
+    max-width: 500px;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--margin-between-elements-m);
+}
+
+.buttonsСontainer {
+    display: flex;
+    justify-content: space-between;
+}

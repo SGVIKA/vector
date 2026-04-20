@@ -1,0 +1,196 @@
+.checkboxContainer {
+    width: fit-content;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox {
+    appearance: none;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border-radius: var(--border-radius-s);
+    border: 0.6px solid var(--color-border);
+    transition: all 0.1s;
+    cursor: pointer;
+    padding: 0;
+}
+
+.checkbox:checked {
+    background: var(--faded-copper);
+}
+
+.checkbox:disabled {
+    border-color: transparent;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-bg-form);
+    pointer-events: none;
+}
+
+.transparentField {
+    font-size: var(--font-size-m);
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+
+.datePickerContainer {
+    display: flex;
+    align-items: center;
+}
+
+.datePickerBtn, .clearBtn {
+    background: transparent;
+    border: none;
+    font-size: var(--font-size-s);
+    padding: 0;
+    margin: 0;
+}
+
+.datePickerBtn {
+    color: var(--toffee-brown);
+}
+
+.clearBtn {
+    margin-left: var(--margin-between-elements-s);
+    color: var(--khaki-beige);
+    transition: color 0.3s;
+}
+
+.clearBtn:hover {
+    color: var(--coffee-bean);
+    transition: color 0.3s;
+}
+
+.dayPickerContainer {
+    position: absolute;
+    background-color: var(--color-bg-form);
+    padding: var(--padding-s);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-base);
+    margin-top: var(--margin-between-elements-s);
+
+    z-index: 10;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    padding: var(--padding-2xs) var(--padding-xs);
+    border-radius: var(--border-radius-l);
+    font-size: var(--font-size-s);
+    /* font-weight: 600; */
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.none {
+    background: #7e7e7e;
+    color: #fff;
+    /* border: 1px solid rgba(107, 114, 128, 0.3); */
+}
+
+.low {
+    background: #5079b2;
+    color: #fff;
+    /* border: 1px solid rgba(59, 130, 246, 0.8); */
+}
+
+.medium {
+    background: #ee9b00;
+    color: #fff;
+    /* border: 1px solid rgba(249, 115, 22, 0.8); */
+}
+
+.high {
+    background: #9b2226;
+    color: #fff;
+    /* border: 1px solid rgba(248, 113, 113, 0.8); */
+}
+
+
+.badgeBtn {
+    background-color: transparent;
+    border: none;
+    border-radius: var(--border-radius-m);
+    /* margin-bottom: var(--margin-between-elements-s); */
+}
+
+.select {
+    position: absolute;
+    background-color: var(--color-bg-form);
+    padding: var(--padding-s);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-base);
+    margin-top: var(--margin-between-elements-s);
+
+    z-index: 10;
+
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 300px;
+}
+
+.colorSelect {
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.prioritySelect {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.selectBadgeBtn {
+    padding: var(--padding-2xs) var(--padding-xs);
+    border-radius: var(--border-radius-l);
+    font-size: var(--font-size-s);
+    margin-bottom: var(--border-radius-s);
+    margin-right: var(--border-radius-s);
+    color: #fff;
+}
+
+.selectBadgeBtn:last-child {
+    margin: 0;
+}
+
+.switcherView {
+    display: flex;
+}
+
+.switcher {
+    border: none;
+    font-size: var(--font-size-m);
+    display: flex;
+    align-items: center;
+    margin-right: var(--margin-between-elements-s);
+    padding: var(--padding-s);
+
+    box-shadow: var(--box-shadow-base);
+}
+
+.switcherIcon {
+    margin-right: var(--margin-between-elements-s);
+}
+
+.switcher:global(.active) {
+    background-color: var(--linen);
+    color: var(--toffee-brown);
+}

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+}
+
+.paginationButton {
+    border: none;
+    background: none;
+    color: var(--khaki-beige);
+    transition: color 0.3s;
+}
+
+.paginationButton:hover {
+    color: var(--toffee-brown);
+    transition: color 0.3s;
+}
+
+.input {
+    font-size: var(--font-size-s);
+    max-width: 85px;
+    border: none;
+    border-bottom: 0.3px solid var(--khaki-beige);
+    border-radius: 0;
+}

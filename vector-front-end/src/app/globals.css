@@ -1,0 +1,146 @@
+:root {
+	/* Базовые цвета */
+	--imperial-blue: #072768;
+	--glaucous: #5079b2;
+	--linen: #f4eae1;
+	--khaki-beige: #BB9F8B;
+	--faded-copper: #9d785d;
+	--toffee-brown: #936a4d;
+	--coffee-bean: #6B4D38;
+
+	/* Бвазовые отступы, скругления */
+	--padding-l: 64px;
+	--padding-lm: 48px;
+	--padding-m: 32px;
+	--padding-s: 16px;
+	--padding-xs: 8px;
+	--padding-2xs: 4px;
+
+	--margin-m: 50px;
+
+	--margin-between-elements-l: 30px;
+	--margin-between-elements-m: 16px;
+	--margin-between-elements-s: 8px;
+
+	--border-radius-l: 16px;
+	--border-radius-m: 8px;
+	--border-radius-s: 4px;
+
+	/* Цвета основных компонентов */
+	--color-background: #e2e8ed;
+	--color-bg-form: #fff;
+	--color-text: #000;
+	--color-border: var(--faded-copper);
+	--color-btn-text: var(--faded-copper);
+	--color-header: #78573F;
+	--color-sidebar-text: #fff;
+	--color-avatar-bg: var(--faded-copper);
+	--color-avatar-text: #fff;
+	--color-subtext: var(--faded-copper);
+	--color-hover-text: var(--faded-copper);
+
+
+	--box-shadow-base: 0px 0px 8px 0px rgba(7, 39, 104, 0.2);
+
+	/* Размеры шрифта */
+	--font-size-4xl: 3.5rem;
+	--font-size-3xl: 3rem;
+	--font-size-2xl: 2rem;
+	--font-size-xl: 1.8rem;
+	--font-size-l: 1.6rem;
+	--font-size-lm: 1.4rem;
+	--font-size-m: 1.2rem;
+	--font-size-s: 1rem;
+	--font-size-xs: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: var(--font-size-s);
+	background-color: var(--color-background);
+	padding: var(--padding-2xs);
+}
+
+body {
+	margin: 0;
+	height: 100%;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+
+.lable {
+	margin-bottom: var(--margin-between-elements-s);
+}
+
+.button {
+	background-color: var(--color-bg-form);
+	border: 0.1px solid var(--color-border);
+	padding: var(--padding-s) var(--padding-m);
+	border-radius: var(--border-radius-m);
+	color: var(--color-btn-text);
+	min-width: 100px;
+
+	transition: all 0.3s, color 0.3s;
+}
+
+.button:hover {
+	background-color: var(--linen);
+	color: var(--toffee-brown);
+	transition: all 0.3s, color 0.3s;
+}
+
+input {
+	background-color: transparent;
+	border: 0.1px solid var(--color-border);
+	height: 40px;
+	padding: var(--padding-s);
+	border-radius: var(--border-radius-m);
+
+}
+
+input:focus-visible {
+	outline: none;
+}
+
+h1 {
+	margin: 0 0 var(--margin-between-elements-s) 0;
+}
+
+.heading {
+	margin: 0 0 var(--margin-between-elements-m) 0;
+	color: var(--color-header);
+	font-size: var(--font-size-xl);
+	font-weight: 500;
+}
+
+.heading>p {
+	margin: var(--margin-between-elements-s);
+}
+
+main {
+	flex: 1;
+	min-width: 0;
+	overflow-x: auto;
+}
+
+.line {
+	border-bottom: 1px solid var(--color-border);
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+textarea {
+	/* font-size: var(--font-size-s); */
+	font-family: var(--font-zen);
+}

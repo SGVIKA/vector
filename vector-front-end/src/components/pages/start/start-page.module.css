@@ -1,0 +1,9 @@
+.container {
+    background: linear-gradient(var(--color-background), #fff);
+    /* height: 100vh; */
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    overflow: hidden;
+}

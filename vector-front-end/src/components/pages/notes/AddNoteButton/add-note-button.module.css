@@ -1,0 +1,12 @@
+.addNoteButton {
+    background-color: var(--imperial-blue);
+    color: var(--linen);
+    font-size: var(--font-size-m);
+    border: none;
+    width: max-content;
+}
+
+.addNoteButton:hover {
+    background-color: var(--glaucous);
+    color: var(--linen);
+}

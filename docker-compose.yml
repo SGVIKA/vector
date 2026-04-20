@@ -21,7 +21,7 @@ services:
       - vector-network
 
   backend:
-    build: ./backend
+    build: ./vector-back-end
     container_name: vector-backend
     restart: always
     environment:
@@ -36,7 +36,7 @@ services:
       - vector-network
 
   frontend:
-    build: ./frontend
+    build: ./vector-front-end
     container_name: vector-frontend
     restart: always
     environment:

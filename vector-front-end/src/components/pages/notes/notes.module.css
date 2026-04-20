@@ -1,0 +1,41 @@
+.notesContainer {
+    margin: var(--margin-between-elements-s);
+    min-height: 100%;
+}
+
+.viewContainer {
+    background-color: var(--color-bg-form);
+    margin: var(--margin-between-elements-s) 0;
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-base);
+    padding: var(--padding-s);
+
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actionsBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-bg-form);
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-base);
+    padding: var(--padding-s);
+    margin-right: var(--margin-between-elements-s);
+    width: 100%;
+}
+
+.pagination {
+    justify-content: end;
+    margin-bottom: var(--margin-between-elements-m);
+}

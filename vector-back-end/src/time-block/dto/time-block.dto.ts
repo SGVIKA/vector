@@ -1,0 +1,20 @@
+import { Transform } from "class-transformer";
+import { IsBoolean, IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
+import { Priority } from "generated/prisma";
+
+export class TimeBlockDto {
+	@IsString()
+	name: string
+
+	@IsOptional()
+	@IsString()
+	color?: string
+	
+	@IsNumber()
+	duration: number
+
+	@IsNumber()
+	@IsOptional()
+	order: number
+
+}

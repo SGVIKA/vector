@@ -1,0 +1,24 @@
+.container {
+    background-color: var(--color-bg-form);
+    border-radius: var(--border-radius-m);
+    margin: var(--margin-between-elements-s);
+    padding: var(--padding-m) var(--padding-m);
+}
+
+.settings {
+    display: flex;
+}
+
+.block {
+    margin-right: var(--margin-between-elements-l);
+    margin-bottom: var(--margin-between-elements-m);
+    margin-top: var(--margin-between-elements-m);
+    min-width: 250px;
+    max-width: 25%;
+}
+
+.settingsItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--margin-between-elements-s);
+}

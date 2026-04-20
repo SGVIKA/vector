@@ -1,0 +1,7 @@
+.loader {
+    position: absolute;
+}
+
+.loader>svg {
+    color: var(--coffee-bean);
+}

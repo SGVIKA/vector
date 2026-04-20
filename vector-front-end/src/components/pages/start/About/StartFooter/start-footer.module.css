@@ -1,0 +1,36 @@
+.footerContainer {
+    background-color: var(--imperial-blue);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-s) var(--padding-m);
+    border-radius: var(--border-radius-m);
+    margin: var(--margin-between-elements-s);
+
+    box-shadow: var(--box-shadow-base);
+}
+
+.logo {
+    display: flex;
+}
+
+.logo {
+    color: #fff;
+}
+
+.logo>span {
+    margin-left: var(--margin-between-elements-m);
+}
+
+.logo>span {
+    font-size: var(--font-size-l);
+}
+
+.logoName {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+}
