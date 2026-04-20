@@ -8,7 +8,7 @@ import styles from './notes-grid-view.module.css'
 import { INote } from '@/src/components/interfaces/notes.interface'
 import { useDeleteNote } from '@/src/hooks/notes/useDeleteNote'
 
-export function NoteCard({ item, setItems }: INote) {
+export function NoteCard({ item }: INote) {
 	const { deleteNote, isDeletePending } = useDeleteNote()
 
 	const truncatedTitle = SliceText(30, item.title)
