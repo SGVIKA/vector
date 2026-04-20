@@ -78,8 +78,8 @@ export function Auth() {
 				/>
 
 				<div className={styles.buttonsСontainer}>
-					<Button onClick={() => setIsLoginForm(true)}>Войти</Button>
-					<Button onClick={() => setIsLoginForm(false)}>
+					<Button type="submit" onClick={() => setIsLoginForm(true)}>Войти</Button>
+					<Button type="submit" onClick={() => setIsLoginForm(false)}>
 						Зарегистрироваться
 					</Button>
 				</div>
