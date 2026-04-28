@@ -9,13 +9,6 @@ class TaskService {
 	async getTasks(): Promise<ITaskResponse[]> {
 		const { data } = await axiosWithAuth.get<ITaskResponse[]>(this.BASE_URL)
 		const sorted = [...data].sort((a, b) => {
-			const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0
-			const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0
-
-			if (dateA !== dateB) {
-				return dateA - dateB // старые задачи выше
-			}
-
 			const aP =
 				a.priority && PRIORITY_ORDER[a.priority] !== undefined
 					? PRIORITY_ORDER[a.priority]
@@ -29,8 +22,6 @@ class TaskService {
 		})
 
 		return sorted
-
-		// return data
 	}
 
 	async createTask(data: TypeTaskFormState) {
