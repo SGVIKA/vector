@@ -4,7 +4,6 @@ import {
 	Settings,
 	SquareCheckBig,
 	StickyNote
-	// Timer
 } from 'lucide-react'
 
 import { IMenuItem } from '../interfaces/ui.interface'
@@ -28,11 +27,6 @@ export const MENU: IMenuItem[] = [
 		name: 'Заметки'
 	},
 
-	// {
-	// 	icon: Timer,
-	// 	link: DASHBOARD_PAGES.TIMER,
-	// 	name: 'Pomodoro таймер'
-	// },
 	{
 		icon: Calendar,
 		link: DASHBOARD_PAGES.TIME_BLOCKING,

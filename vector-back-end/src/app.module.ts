@@ -5,7 +5,6 @@ import { UserModule } from './user/user.module'
 import { NoteModule } from './note/note.module'
 import { TaskModule } from './task/task.module'
 import { TimeBlockModule } from './time-block/time-block.module'
-import { PomodoroModule } from './pomodoro/pomodoro.module'
 
 @Module({
 	imports: [
@@ -15,7 +14,6 @@ import { PomodoroModule } from './pomodoro/pomodoro.module'
 		NoteModule,
 		TaskModule,
 		TimeBlockModule,
-		PomodoroModule
 	]
 })
 export class AppModule {}
