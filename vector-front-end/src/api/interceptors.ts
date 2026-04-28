@@ -9,7 +9,9 @@ import { authService } from '../services/auth.service'
 import { errorCatch } from './error'
 
 const options: CreateAxiosDefaults = {
-	baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
+	baseURL: process.env.NODE_ENV === 'production' 
+		? '/api'  // В продакшене через Nginx
+		: 'http://localhost:4000/api',  // В разработке напрямую
 	headers: {
 		'Content-Type': 'application/json'
 	},
