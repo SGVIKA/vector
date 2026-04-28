@@ -28,7 +28,9 @@ class TaskService {
 			return 0
 		})
 
-		return sorted
+		// return sorted
+
+		return data
 	}
 
 	async createTask(data: TypeTaskFormState) {

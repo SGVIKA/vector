@@ -14,7 +14,7 @@ export class TaskService {
 			where: {
 				userId
 			},
-			orderBy: [{ createdAt: 'asc' }, { priority: 'desc' }]
+			orderBy: [{ createdAt: 'desc' }, { priority: 'desc' }]
 		})
 	}
 
