@@ -26,7 +26,7 @@ export function TimeBlock({ item }: { item: ITimeBlockResponse }) {
 				className={styles.block}
 				style={{
 					backgroundColor: item.color || Object.values(COLORS)[0],
-					height: `${item.duration}px`
+					height: `${item.duration/2}px`
 				}}
 			>
 				<div className={styles.title}>

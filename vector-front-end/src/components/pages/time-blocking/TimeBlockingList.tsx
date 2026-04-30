@@ -24,7 +24,7 @@ export function TimeBlockingList() {
 				collisionDetection={closestCenter}
 				onDragEnd={handleDragEnd}
 			>
-				<div>
+				<div className={styles.TimeBlocksContainer}>
 					<SortableContext
 						items={items || []}
 						strategy={verticalListSortingStrategy}
