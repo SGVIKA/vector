@@ -9,15 +9,15 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-
-  email    String  @unique
-  name     String?
-  password String
-
+  id               String             @id @default(cuid())
+  createdAt        DateTime           @default(now()) @map("created_at")
+  updatedAt        DateTime           @updatedAt @map("updated_at")
+  email            String             @unique
+  name             String?
+  password         String
+  
   notes            Note[]
+ 
   tasks            Task[]
   timeBlocks       TimeBlock[]
 
@@ -28,27 +28,24 @@ model Note {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
-
-  title String? @default("Undefined")
-  text  String?
-
-  user   User   @relation(fields: [userId], references: [id])
-  userId String @map("user_id")
+  title     String?  @default("Undefined")
+  text      String?
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id])
 
   @@map("note")
 }
 
 model Task {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
   text        String
+  deadline    DateTime?
   priority    Priority?
   isCompleted Boolean?  @default(false) @map("is_completed")
-
-  user   User   @relation(fields: [userId], references: [id])
-  userId String @map("user_id")
+  userId      String    @map("user_id")
+  user        User      @relation(fields: [userId], references: [id])
 
   @@map("task")
 }
@@ -57,21 +54,19 @@ model TimeBlock {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
-
-  name     String
-  color    String?
-  duration Int
-  order    Int     @default(1)
-
-  user   User   @relation(fields: [userId], references: [id])
-  userId String @map("user_id")
+  name      String
+  color     String?
+  duration  Int
+  order     Int      @default(1)
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id])
 
   @@map("time_block")
 }
 
 enum Priority {
-  none
   low
   medium
   high
+  none
 }
