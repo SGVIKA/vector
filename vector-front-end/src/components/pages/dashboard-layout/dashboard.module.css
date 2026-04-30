@@ -6,7 +6,7 @@
 }
 
 .sidebar {
-    position: sticky;
+    position: fixed;
     top: 4px;
     left: 0;
     height: 95vh;
@@ -20,7 +20,7 @@
 
     flex-shrink: 0;
 
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 .sidebar:hover {
