@@ -5,7 +5,7 @@ import { Priority } from 'generated/prisma'
 export class TaskDto {
 	@IsString()
 	@IsOptional()
-	text: string
+	text: string = ''
 
 	@IsBoolean()
 	@IsOptional()
