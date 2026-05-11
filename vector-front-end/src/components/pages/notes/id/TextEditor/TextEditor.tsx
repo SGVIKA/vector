@@ -27,33 +27,34 @@ import '@mdxeditor/editor/style.css'
 export function TextEditor({ item, setValue }: ITextEditor) {
 	return (
 		<div className={styles.textEditor}>
+			{/* Редактор Markdown */}
 			<MDXEditor
-				markdown={item.text || ''}
-				onChange={markdown => setValue('text', markdown || '')}
+				markdown={item.text || ''} // Исходный текст
+				onChange={markdown => setValue('text', markdown || '')} // Сохранение изменений
 				plugins={[
-					tablePlugin(),
-					linkPlugin(),
-					linkDialogPlugin(),
-					thematicBreakPlugin(),
+					tablePlugin(), // Таблицы
+					linkPlugin(), // Ссылки
+					linkDialogPlugin(), // Диалог вставки ссылки
+					thematicBreakPlugin(), // Горизонтальная линия
 					toolbarPlugin({
+						// Панель инструментов
 						toolbarContents: () => (
 							<>
-								<BlockTypeSelect />
-								<BoldItalicUnderlineToggles />
-								<CodeToggle />
-								<CreateLink />
-								<InsertTable />
-								<ListsToggle />
-								<InsertThematicBreak />
-								<UndoRedo />
+								<BlockTypeSelect /> // Типы блоков
+								<BoldItalicUnderlineToggles /> // Жирный/курсив/подчеркивание
+								<CodeToggle /> // Вставка кода
+								<CreateLink /> // Добавить ссылку
+								<InsertTable /> // Вставить таблицу
+								<ListsToggle /> // Списки
+								<InsertThematicBreak /> // Разделитель
+								<UndoRedo /> // Отмена/повтор
 							</>
 						)
 					}),
-					headingsPlugin(),
-					listsPlugin(),
-					linkPlugin(),
-					quotePlugin(),
-					markdownShortcutPlugin()
+					headingsPlugin(), // Заголовки
+					listsPlugin(), // Списки
+					quotePlugin(), // Цитаты
+					markdownShortcutPlugin() // Быстрые команды
 				]}
 			/>
 		</div>

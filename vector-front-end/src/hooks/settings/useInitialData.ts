@@ -11,10 +11,7 @@ export function useInitialData(reset: UseFormReset<TypeUserForm>) {
 		if (isSuccess && data) {
 			reset({
 				email: data.user.email,
-				name: data.user.name,
-				breakInterval: data.user.breakInterval,
-				intervalsCount: data.user.intervalsCount,
-				workInterval: data.user.workInterval
+				name: data.user.name
 			})
 		}
 	}, [isSuccess])
