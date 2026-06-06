@@ -43,6 +43,8 @@
     border: none;
     color: rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
+
+    touch-action: none;
 }
 
 .action:hover {
