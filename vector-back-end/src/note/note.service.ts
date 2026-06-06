@@ -2,8 +2,6 @@ import { Injectable } from '@nestjs/common'
 import { PrismaService } from '../prisma.service'
 import { NoteDto } from './note.dto'
 import { QueryDto } from 'src/dto/query.dto'
-import { title } from 'process'
-import { contains } from 'class-validator'
 
 @Injectable()
 export class NoteService {
@@ -86,9 +84,10 @@ export class NoteService {
 		})
 	}
 
-	async delete(noteId: string) {
+	async delete(noteId: string, userId: string) {
 		return this.prisma.note.delete({
 			where: {
+				userId,
 				id: noteId
 			}
 		})
