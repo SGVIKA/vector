@@ -69,7 +69,11 @@ html {
 body {
 	margin: 0;
 	height: 100%;
-	margin-left: 70px;
+	
+}
+
+.no-margin-left{
+	/* margin-left: 0; */
 }
 
 button:hover {
@@ -130,6 +134,8 @@ main {
 	flex: 1;
 	min-width: 0;
 	overflow-x: auto;
+
+	margin-left: 70px;
 }
 
 .line {

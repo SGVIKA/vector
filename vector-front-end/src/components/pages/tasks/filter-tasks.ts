@@ -36,6 +36,8 @@ export const filterTasks = (
 		case 'on-next-week':
 			return tasks?.filter(
 				item =>
+					!dayjs(item.createdAt).isSame(FILTERS.today, 'day') &&
+					!dayjs(item.createdAt).isSame(FILTERS.tomorrow, 'day') &&
 					dayjs(item.createdAt).isAfter(FILTERS['on-this-week']) &&
 					dayjs(item.createdAt).isSameOrBefore(FILTERS['on-next-week']) &&
 					!item.isCompleted
@@ -43,6 +45,8 @@ export const filterTasks = (
 		case 'later':
 			return tasks?.filter(
 				item =>
+					!dayjs(item.createdAt).isSame(FILTERS.today, 'day') &&
+					!dayjs(item.createdAt).isSame(FILTERS.tomorrow, 'day') &&
 					(dayjs(item.createdAt).isAfter(FILTERS['on-next-week']) ||
 						!item.createdAt) &&
 					!item.isCompleted
