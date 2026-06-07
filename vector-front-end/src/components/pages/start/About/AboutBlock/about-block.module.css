@@ -52,3 +52,13 @@
     margin-top: var(--margin-between-elements-m);
     box-shadow: none;
 }
+
+/* Мобильная адаптация для хедера (375px) */
+@media screen and (max-width: 480px) {
+    .image, .textBlock, .aboutBlockNotes>.textBlock, .largeImage{
+        max-width: 100%;
+    }
+    .imageFirst{
+        order: 0;
+    }
+}

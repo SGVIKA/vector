@@ -158,6 +158,130 @@
     transition: color 0.2s;
 }
 
-.mainContent{
+.mainContent {
     overflow-y: hidden;
+}
+
+/* Мобильная адаптация для хедера (375px) */
+/* @media screen and (max-width: 480px) {
+    .sidebar{
+        top: auto;
+        bottom: 0;
+    }
+} */
+
+/* Мобильная адаптация (375px) */
+@media screen and (max-width: 480px) {
+
+    /* Изменяем основной контейнер */
+    .container {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    /* Превращаем сайдбар в нижнюю панель */
+    .sidebar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        /* margin: var(--margin-between-elements-s);
+        background-color: var(--imperial-blue);
+        border-radius: var(--border-radius-m); */
+        transition: none;
+        /* Убираем анимацию выдвижения */
+        overflow: visible;
+        z-index: 100;
+    }
+
+    .sidebarContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Отключаем hover-эффект расширения */
+    .sidebar:hover {
+        width: auto;
+    }
+
+    /* Горизонтальное расположение пунктов меню */
+    .menuHeading {
+        display: none;
+        /* Скрываем заголовок меню на мобилках */
+    }
+
+    /* Меняем расположение пунктов на горизонтальное */
+    .sidebar>div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: var(--padding-xs) var(--padding-s);
+    }
+
+    .menuItem {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding: var(--padding-xs);
+        min-width: 60px;
+        background-color: transparent;
+        transition: none;
+    }
+
+    .menuItem:hover {
+        background-color: transparent;
+    }
+
+    /* Иконки остаются видимыми */
+    .menuItem svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Текст скрываем всегда (без анимаций) */
+    .menuItem>span {
+        display: none;
+        opacity: 0;
+        transform: none;
+        margin-left: 0;
+        font-size: 10px;
+        margin-top: var(--margin-between-elements-xs);
+    }
+
+    /* Убираем все hover-эффекты для текста */
+    .sidebar:hover .menuItem>span {
+        display: none;
+        opacity: 0;
+        transform: none;
+    }
+
+    /* Активный пункт меню (опционально) */
+    .menuItem.active {
+        background-color: var(--glaucous);
+        border-radius: var(--border-radius-m);
+    }
+
+    /* Ссылки в меню */
+    .sidebarLink {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--margin-between-elements-xs);
+    }
+
+    /* Основной контент с отступом снизу (чтобы не перекрывался панелью) */
+    .mainContent {
+        margin-bottom: 80px;
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    /* Корректируем header */
+    .header {
+        margin-bottom: var(--margin-between-elements-s);
+    }
 }

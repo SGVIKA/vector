@@ -19,7 +19,7 @@ export default function Sidebar() {
 					<span className={styles.sidebarLink}>{SITE_NAME}</span>
 				</Link>
 
-				<div>
+				<div className={styles.sidebarContainer}>
 					{MENU.map(item => (
 						<MenuItem
 							item={item}
