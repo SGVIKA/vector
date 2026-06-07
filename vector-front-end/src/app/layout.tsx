@@ -6,6 +6,7 @@ import { Providers } from '../components/providers'
 import { SITE_NAME } from '../constants/seo.constants'
 
 import './globals.css'
+// import '@mdxeditor/editor/style.css'
 
 // Настройка шрифта Noto Sans для всего приложения
 const zen = Noto_Sans({
