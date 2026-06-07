@@ -48,7 +48,7 @@ export default function RootLayout({
 
                     {/* Система уведомлений */}
                     <Toaster
-                        position='bottom-right'  // Позиция появления уведомлений
+                        position='top-center'  // Позиция появления уведомлений
                         duration={1500}          // Продолжительность отображения (мс)
                     />
                 </Providers>

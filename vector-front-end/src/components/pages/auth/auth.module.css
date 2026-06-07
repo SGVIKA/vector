@@ -23,3 +23,13 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* Мобильная адаптация для хедера (375px) */
+@media screen and (max-width: 480px) {
+    .buttonsСontainer{
+        flex-direction: column;
+    }
+    .buttonsСontainer>button{
+        margin-top: var(--margin-between-elements-m);
+    }
+}
