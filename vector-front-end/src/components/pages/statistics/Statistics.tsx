@@ -32,6 +32,7 @@ export function Statistics() {
 				)}
 			</div>
 
+{/* Перебор данных и отображение раздела статистики "Звметки" */}
 			<Heading
 				title='Заметки'
 				className={styles.statTitle}

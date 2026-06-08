@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common'
 import { NoteService } from './note.service'
 import { Auth } from 'src/auth/decorators/auth.decorator'
-import { CurrentUser } from 'src/auth/decorators/user.decorator'
+import { CurrentUser } from '../auth/decorators/user.decorator'
 import { NoteDto } from './note.dto'
 import { QueryDto } from 'src/dto/query.dto'
 
@@ -65,7 +65,7 @@ export class NoteController {
 	@HttpCode(200)
 	@Delete(':id')
 	@Auth()
-	async delete(@Param('id') id: string) {
-		return this.noteService.delete(id)
+	async delete(@CurrentUser('id') userId: string, @Param('id') id: string) {
+		return this.noteService.delete(id, userId)
 	}
 }

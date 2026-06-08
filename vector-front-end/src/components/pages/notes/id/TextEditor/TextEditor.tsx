@@ -51,7 +51,6 @@ export function TextEditor({ item, setValue }: ITextEditor) {
 					}),
 					headingsPlugin(),
 					listsPlugin(),
-					linkPlugin(),
 					quotePlugin(),
 					markdownShortcutPlugin()
 				]}

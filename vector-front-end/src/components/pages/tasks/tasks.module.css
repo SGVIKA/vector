@@ -32,6 +32,8 @@
     background: transparent;
     color: var(--khaki-beige);
     transition: color 0.3s;
+
+    touch-action: none;
 }
 
 .grip:hover {
