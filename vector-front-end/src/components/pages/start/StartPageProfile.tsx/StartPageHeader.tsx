@@ -21,20 +21,22 @@ export default function StartPageHeader() {
 					<span className={styles.logoName}>{SITE_NAME}</span>
 				</Link>
 				{data?.user ? (
-					<Link
-						href='/dashboard'
-						className={styles.profile}
-					>
-						<div className={styles.profileData}>
-							<p className={styles.username}>{data?.user.name}</p>
-							<p className={styles.email}>{data?.user.email}</p>
-						</div>
+					<div className={styles.profile}>
+						<Link
+							href='/dashboard'
+							className={styles.profile}
+						>
+							<div className={styles.profileData}>
+								<p className={styles.username}>{data?.user.name}</p>
+								<p className={styles.email}>{data?.user.email}</p>
+							</div>
 
-						<div className={styles.avatar}>
-							{data?.user.name?.charAt(0) || 'A'}
-						</div>
+							<div className={styles.avatar}>
+								{data?.user.name?.charAt(0) || 'A'}
+							</div>
+						</Link>
 						<LogoutButton />
-					</Link>
+					</div>
 				) : null}
 			</div>
 		</div>
