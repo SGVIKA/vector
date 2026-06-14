@@ -284,4 +284,16 @@
     .header {
         margin-bottom: var(--margin-between-elements-s);
     }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoutButton{
+        max-width: 90%;
+    }
+    .logoutButton>svg{
+        width: 100%;
+    }
 }
