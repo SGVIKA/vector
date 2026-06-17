@@ -194,3 +194,14 @@
     background-color: var(--linen);
     color: var(--toffee-brown);
 }
+
+@media screen and (max-width: 480px){
+    .switcher:last-child{
+        margin: 0;
+    }
+
+    .checkbox>svg{
+        width: 20px;
+        height: 20px;
+    }
+}

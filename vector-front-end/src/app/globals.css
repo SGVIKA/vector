@@ -199,11 +199,11 @@ textarea {
 	}
 
 	/* Увеличиваем зону касания для инпутов */
-	input,
-	button {
-		min-height: 44px;
+	/* input, */
+	/* button { */
+		/* min-height: 44px; */
 		/* Apple рекомендуемый min-target-size */
-	}
+	/* } */
 
 	/* Заголовки с меньшими отступами */
 	.heading {

@@ -57,3 +57,14 @@
     text-decoration: line-through;
     color: #bcb3b3;
 }
+
+@media screen and (max-width: 480px){
+    .tasksContainer{
+        margin: 0;
+    }
+    
+    .taskCheck{
+        margin-right: 5px;
+        /* justify-self: end; */
+    }
+}

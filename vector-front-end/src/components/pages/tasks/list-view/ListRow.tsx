@@ -29,60 +29,66 @@ export function ListRow({ item, setItems }: IListRow) {
 
 	return (
 		<div className={styles.row}>
-			<div className={styles.rowItem}>
-				<button
-					className={taskStyles.grip}
-					aria-describedby='todo-item'
-				>
-					<GripVertical />
-				</button>
+			<div className={styles.taskActions}>
+				<div className={styles.rowItem}>
+					<button
+						className={taskStyles.grip}
+						aria-describedby='todo-item'
+					>
+						<GripVertical />
+					</button>
+				</div>
+				<div className={styles.rowItem}>
+					<Controller
+						control={control}
+						name='isCompleted'
+						render={({ field: { value, onChange } }) => (
+							<Checkbox
+								onChange={onChange}
+								checked={value}
+								extra={taskStyles.taskCheck}
+							/>
+						)}
+					/>
+				</div>
 			</div>
-			<div className={styles.rowItem}>
-				<Controller
-					control={control}
-					name='isCompleted'
-					render={({ field: { value, onChange } }) => (
-						<Checkbox
-							onChange={onChange}
-							checked={value}
-						/>
-					)}
-				/>
-			</div>
-			<div className={styles.rowItem}>
+			<div className={styles.rowItems}>
 				<TransparentField
-					className={`${watch('isCompleted') ? taskStyles.completedTask : ''}`}
+					className={`${watch('isCompleted') ? taskStyles.completedTask : ''} ${styles.taskText}`}
 					{...register('text')}
 				/>
-			</div>
-			<div className={styles.rowItem}>
-				<Controller
-					control={control}
-					name='createdAt'
-					render={({ field: { value, onChange } }) => (
-						<DatePicker
-							onChange={onChange}
-							value={value || ''}
+				<div className={styles.properties}>
+					<div className={styles.rowItem}>
+						<Controller
+							control={control}
+							name='createdAt'
+							render={({ field: { value, onChange } }) => (
+								<DatePicker
+									onChange={onChange}
+									value={value || ''}
+								/>
+							)}
 						/>
-					)}
-				/>
-			</div>
-			<div className={styles.rowItem}>
-				<Controller
-					control={control}
-					name='priority'
-					render={({ field: { value, onChange } }) => (
-						<SingleSelect
-							data={['high', 'medium', 'low'].map(item => ({
-								value: item,
-								label: item
-							}))}
-							onChange={onChange}
-							value={value || 'none'}
+					</div>
+					<div className={styles.rowItem}>
+						<Controller
+							control={control}
+							name='priority'
+							render={({ field: { value, onChange } }) => (
+								<SingleSelect
+									data={['high', 'medium', 'low'].map(item => ({
+										value: item,
+										label: item
+									}))}
+									onChange={onChange}
+									value={value || 'none'}
+								/>
+							)}
 						/>
-					)}
-				/>
+					</div>
+				</div>
 			</div>
+
 			<div className={styles.rowItem}>
 				<button
 					className={taskStyles.deleteBtn}

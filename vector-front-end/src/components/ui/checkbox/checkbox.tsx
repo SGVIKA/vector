@@ -19,7 +19,7 @@ const Checkbox = (props: { id?: string; extra?: string; [x: string]: any }) => {
 				<Check
 					className={styles.icon}
 					size={14}
-					strokeWidth={3}
+					// strokeWidth={3}
 				/>
 			)}
 		</div>
