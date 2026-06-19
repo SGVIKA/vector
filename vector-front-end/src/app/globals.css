@@ -224,6 +224,11 @@ textarea {
 	.line {
 		margin: var(--margin-between-elements-s) 0;
 	}
+
+	.invisibleOnMobile{
+		opacity: 0;
+		position: absolute;
+	}
 }
 
 /* Дополнительно для очень маленьких экранов (320px) */

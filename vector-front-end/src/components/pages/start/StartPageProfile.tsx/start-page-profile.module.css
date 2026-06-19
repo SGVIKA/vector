@@ -79,9 +79,12 @@
 
 /* Мобильная адаптация для хедера (375px) */
 @media screen and (max-width: 480px) {
+    .logo{
+        width: 35px;
+    }
     .logoName{
         opacity: 0;
-        
+        position: absolute;
     }
     .avatar{
         width: 40px;

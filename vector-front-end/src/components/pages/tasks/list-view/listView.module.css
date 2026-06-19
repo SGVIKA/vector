@@ -87,9 +87,14 @@
         width: 100%;
     }
 
-    .properties>.rowItem:not(:last-child) {
-        margin-right: 5px;
+    .properties {
+        display: flex;
+        flex-direction: column;
     }
+
+    /* .properties>.rowItem:not(:last-child) {
+        margin-right: 5px;
+    } */
 
     .taskText {
         margin-bottom: var(--margin-between-elements-s);
