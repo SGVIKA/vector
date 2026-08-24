@@ -9,9 +9,12 @@ import styles from '../ui.module.css'
 
 import { useOutside } from '@/src/hooks/useOutside'
 
-import 'react-day-picker/dist/style.css'
+// import 'react-day-picker/dist/style.css'
+import "./date-picker.css"
+
 
 dayjs.extend(LocalizedFormat)
+dayjs.locale("ru")
 
 export function DatePicker({
 	onChange,

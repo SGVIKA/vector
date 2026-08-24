@@ -26,7 +26,7 @@ export function AddNoteButton({}) {
 				onClick={handleCreateNote}
 				disabled={isCreatePending}
 			>
-				Создать +
+				<span className='invisibleOnMobile'>Создать</span> +
 			</button>
 		</div>
 	)

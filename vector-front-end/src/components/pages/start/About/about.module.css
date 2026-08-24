@@ -4,6 +4,8 @@
     color: var(--linen);
     font-size: var(--font-size-l);
     padding: var(--padding-s) var(--padding-l);
+    text-align: center;
+    max-width: 220px;
 }
 
 .startButton:hover {
@@ -59,4 +61,28 @@
 .aboutBlocks>div:nth-child(2) {
     display: flex;
     flex-direction: column;
+}
+
+/* Мобильная адаптация для хедера (375px) */
+@media screen and (max-width: 480px) {
+
+    .textBlock, .subtext, .image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .aboutBlocks>div{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .aboutBlock>div{
+        max-width: 100%;
+    }
+    .textBlock{
+        max-width: 100%;
+    }
+    .text{
+        text-align: center;
+    }
 }

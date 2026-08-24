@@ -57,3 +57,20 @@
     text-decoration: line-through;
     color: #bcb3b3;
 }
+
+@media screen and (max-width: 480px){
+    .grip{
+        padding: 0;
+    }
+    .tasksContainer{
+        margin: 0;
+    }
+    
+    .taskCheck{
+        margin-right: 5px;
+        /* justify-self: end; */
+    }
+
+    
+    
+}

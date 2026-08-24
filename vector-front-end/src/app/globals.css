@@ -151,3 +151,94 @@ textarea {
 	/* font-size: var(--font-size-s); */
 	font-family: var(--font-zen);
 }
+
+
+
+/* Мобильная адаптация (375px) */
+@media screen and (max-width: 480px) {
+	:root {
+		/* Уменьшаем отступы в 2 раза */
+		--padding-l: 32px;
+		--padding-lm: 24px;
+		--padding-m: 16px;
+		--padding-s: 12px;
+		--padding-xs: 6px;
+
+		/* Уменьшаем межэлементные отступы */
+		--margin-m: 30px;
+		--margin-between-elements-l: 20px;
+		--margin-between-elements-m: 12px;
+
+		/* Уменьшаем шрифты */
+		--font-size-4xl: 2rem;
+		--font-size-3xl: 1.8rem;
+		--font-size-2xl: 1.5rem;
+		--font-size-xl: 1.4rem;
+		--font-size-l: 1.3rem;
+		--font-size-lm: 1.2rem;
+		--font-size-m: 1.1rem;
+		--font-size-s: 0.9rem;
+		--font-size-xs: 0.75rem;
+	}
+
+	html {
+		padding: var(--padding-xs);
+	}
+
+	/* Ключевое исправление - левый отступ main */
+	main {
+		margin-left: 0;
+		padding: var(--padding-s);
+	}
+
+	/* Кнопки на всю ширину для удобства тапа */
+	.button {
+		min-width: auto;
+		width: 100%;
+		padding: var(--padding-s) var(--padding-m);
+	}
+
+	/* Увеличиваем зону касания для инпутов */
+	/* input, */
+	/* button { */
+		/* min-height: 44px; */
+		/* Apple рекомендуемый min-target-size */
+	/* } */
+
+	/* Заголовки с меньшими отступами */
+	.heading {
+		font-size: var(--font-size-l);
+		margin-bottom: var(--margin-between-elements-m);
+	}
+
+	h1 {
+		font-size: var(--font-size-xl);
+	}
+
+	/* Отключаем box-shadow для производительности на мобилках */
+	.box-shadow-base {
+		box-shadow: none;
+	}
+
+	/* Убираем лишние бордеры если нужно */
+	.line {
+		margin: var(--margin-between-elements-s) 0;
+	}
+
+	.invisibleOnMobile{
+		opacity: 0;
+		position: absolute;
+	}
+}
+
+/* Дополнительно для очень маленьких экранов (320px) */
+@media screen and (max-width: 375px) {
+	:root {
+		--padding-s: 10px;
+		--font-size-s: 0.85rem;
+	}
+
+	body {
+		font-size: var(--font-size-s);
+	}
+}

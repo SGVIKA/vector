@@ -41,3 +41,16 @@
     font-size: var(--font-size-4xl);
     color: var(--imperial-blue);
 }
+
+@media screen and (max-width: 480px){
+    .container{
+        margin: 0;
+    }
+    .block{
+        justify-content: center;
+    }
+    .statisticCard{
+        max-width: 250px;
+        width: 100%;
+    }
+}
